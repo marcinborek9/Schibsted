@@ -5,18 +5,21 @@ module.exports = {
     entry: './client/index.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'index_bundle.js'
+      filename: 'bundle.js'
+    },
+    resolve: {
+      extensions: [".ts", ".tsx", ".js", ".jsx"]
     },
     module: {
         rules: [
           {
-            test: /\.(js|jsx)$/,
+            test: /\.(js|jsx|ts|tsx)$/,
             exclude: /node_modules/,
             use: {
               loader: "babel-loader"
             }
           }
-        ]
+        ],
     },
     mode: 'development',
     plugins: [
