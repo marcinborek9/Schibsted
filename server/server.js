@@ -1,14 +1,10 @@
 import express from 'express';
-import path from 'path';
+import images from './routes/api/images';
 
-let app = express();
+const app = express();
 
-app.get('/test', (req, res) => res.send('Express started!'));
-
-app.use(express.static(path.join(__dirname, '/../dist')));
-app.get('*', (req,res) => {
-  res.sendFile(path.join(__dirname + '/../dist/index.html'));
-});
+app.use('/api/images', images);
+app.use(express.static('dist'));
 
 const port = process.env.PORT || 5000;
 

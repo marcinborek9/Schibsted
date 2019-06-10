@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {Normalize} from 'styled-normalize';
+import {InitialPage} from './views/InitialPage/components/InitialPage';
+
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        App12
+        <Normalize/>
+        <InitialPage/>
       </React.Fragment>
     )
   }
