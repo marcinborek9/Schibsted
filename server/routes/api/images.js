@@ -1,7 +1,6 @@
-import express from 'express';
-import axios from 'axios';
-
-import {KEY} from '../../config/keys'
+const express = require('express');
+const axios = require('axios');
+const KEY = require('../../config/keys');
 
 const router = express.Router();
 

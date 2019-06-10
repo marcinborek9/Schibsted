@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "node ./server/server.js",
+    "heroku-postbuild": "webpack -p",
     "client": "webpack-dev-server",
     "server": "nodemon --exec babel-node ./server/server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""

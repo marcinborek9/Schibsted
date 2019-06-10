@@ -1,5 +1,5 @@
-import express from 'express';
-import images from './routes/api/images';
+const express = require('express');
+const images = require('./routes/api/images');
 
 const app = express();
 
